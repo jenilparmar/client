@@ -31,7 +31,7 @@ const useName = useContext(ComentsContext)
   };
 
   const handlePost = () => {
-    fetch("https://socailmedia-2-rwel.onrender.com/Posts", {
+    fetch("https://socialmedia-123.onrender.com/Posts", {
       method: "POST",
       body: JSON.stringify({
         accountName: useName['userName'],

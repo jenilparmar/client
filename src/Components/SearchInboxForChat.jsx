@@ -11,7 +11,7 @@ export default function SearchInboxForChat({ setPerson }) {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      fetch(`https://socailmedia-2-rwel.onrender.com/searchForChat/${searchValue}`)
+      fetch(`https://socialmedia-123.onrender.com/searchForChat/${searchValue}`)
         .then((res) => {
           return res.json();
         })

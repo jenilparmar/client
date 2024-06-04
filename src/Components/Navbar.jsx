@@ -13,7 +13,7 @@ export default function Navbar({ activeFunction, darkMode, isDarkMode }) {
   const [image , setImage] = useState("")
   useEffect(()=>{
     // console.log(name);
-    fetch(`https://socailmedia-2-rwel.onrender.com/findUser/${userName}`)
+    fetch(`https://socialmedia-123.onrender.com/findUser/${userName}`)
     .then(res=>{
       return res.json();
     })

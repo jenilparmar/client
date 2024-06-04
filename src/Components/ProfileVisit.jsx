@@ -15,7 +15,7 @@ export default function ProfileVisit({ person, info }) {
     setPostArray(info["posts"]); // Assuming "post" is an object
   }, []);
   useEffect(() => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/getProfilePosts/${person}`)
+    fetch(`https://socialmedia-123.onrender.com/getProfilePosts/${person}`)
       .then((res) => {
         return res.json();
       })
@@ -48,7 +48,7 @@ export default function ProfileVisit({ person, info }) {
 
   const { userName } = useContext(ComentsContext);
   useEffect(() => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/checkIsFollowing/${person}/${userName}`)
+    fetch(`https://socialmedia-123.onrender.com/checkIsFollowing/${person}/${userName}`)
       .then((res) => {
         return res.json();
       })
@@ -60,7 +60,7 @@ export default function ProfileVisit({ person, info }) {
       });
   }, []);
   function addToFollow() {
-    fetch(`https://socailmedia-2-rwel.onrender.com/addFollowing/${person}/${userName}`)
+    fetch(`https://socialmedia-123.onrender.com/addFollowing/${person}/${userName}`)
       .then((res) => {
         return res.json();
       })
@@ -71,7 +71,7 @@ export default function ProfileVisit({ person, info }) {
         console.log(e);
       });
 
-    fetch(`https://socailmedia-2-rwel.onrender.com/addFollower/${userName}/${person}`)
+    fetch(`https://socialmedia-123.onrender.com/addFollower/${userName}/${person}`)
       .then((res) => {
         return res.json();
       })
@@ -85,7 +85,7 @@ export default function ProfileVisit({ person, info }) {
   }
   // Renders profile information and posts
   useEffect(() => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/findUser/${person}`)
+    fetch(`https://socialmedia-123.onrender.com/findUser/${person}`)
       .then((res) => {
         return res.json();
       })

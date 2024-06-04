@@ -9,7 +9,7 @@ export default function Commentbox() {
     setCommentActive(true);
   };
   const handleSendComment = () => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/PostComment/${id["id"]}/${commentText}`)
+    fetch(`https://socialmedia-123.onrender.com/PostComment/${id["id"]}/${commentText}`)
       .then((data) => {
         // console.log(data);       
           let i = document.getElementById('input')// Clear the input field after 
@@ -27,7 +27,7 @@ export default function Commentbox() {
 
   useEffect(() => {
     // console.log(id['id']);
-    fetch(`https://socailmedia-2-rwel.onrender.com/PostData/${id['id']}`)
+    fetch(`https://socialmedia-123.onrender.com/PostData/${id['id']}`)
     
       .then((res) => res.json())
       .then((data) => {

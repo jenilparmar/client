@@ -14,7 +14,7 @@ export default function Profile() {
   const [profilePost, setProfilePost] = useState([]);
 
   useEffect(() => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/search/${userName["userName"]}`)
+    fetch(`https://socialmedia-123.onrender.com/search/${userName["userName"]}`)
       .then((res) => res.json())
       .then((data) => {
         setProfile(data);
@@ -39,7 +39,7 @@ export default function Profile() {
   }, [profile]);
 
   useEffect(() => {
-    fetch(`https://socailmedia-2-rwel.onrender.com/getProfilePosts/${userName["userName"]}`)
+    fetch(`https://socialmedia-123.onrender.com/getProfilePosts/${userName["userName"]}`)
       .then((res) => res.json())
       .then((data) => {
         setProfilePost(data);
@@ -52,7 +52,7 @@ export default function Profile() {
   const handleDelete = (index) => {
     const id = profile["posts"][index];
 
-    fetch(`https://socailmedia-2-rwel.onrender.com/deletePost/${id}`)
+    fetch(`https://socialmedia-123.onrender.com/deletePost/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -63,7 +63,7 @@ export default function Profile() {
         console.log(e);
       });
 
-    fetch(`https://socailmedia-2-rwel.onrender.com/deleteFromFindUser/${userName["userName"]}/${index}`)
+    fetch(`https://socialmedia-123.onrender.com/${userName["userName"]}/${index}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

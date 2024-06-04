@@ -13,11 +13,10 @@ export default function Scrollpage({
 
   useEffect(() => {
     if (userName) {
-      fetch(`https://socailmedia-2-rwel.onrender.com/GetAllPosts/${userName}`)
+     
+      fetch(`https://socialmedia-123.onrender.com/GetAllPosts/${userName}`,{mode:"no-cors"})
         .then((res) => {
-          if (!res.ok) {
-            throw new Error("Network response was not ok");
-          }
+          console.log(res);
           return res.json();
         })
         .then((data) => {

@@ -18,7 +18,7 @@ const { userName} = useContext(ComentsContext)
         handleClick("Profile")
       }
       else{
-      fetch(`https://socailmedia-2-rwel.onrender.com/search/${searchValue}`)
+      fetch(`https://socialmedia-123.onrender.com/search/${searchValue}`)
         .then((res) => {
           return res.json();
         })

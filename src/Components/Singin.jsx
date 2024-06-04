@@ -54,7 +54,7 @@ const {setUserName} = useContext(ComentsContext)
     visitedPosts:[]
   };
 
-  fetch(`/Dataentry`, {
+  fetch(`https://socialmedia-123.onrender.com/Dataentry`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -72,7 +72,7 @@ const {setUserName} = useContext(ComentsContext)
     // Do something with the response data if needed
     console.log(data);
     // Fetch user or perform other actions as needed
-    fetch(`/findUser/${name}`)
+    fetch(`https://socialmedia-123.onrender.com/findUser/${name}`)
       .then(data => {
         // console.log(data);
       })
