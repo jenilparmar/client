@@ -11,7 +11,7 @@ export default function AuthenticationPage({ setAuthenticated }) {
   const [failed, setFailed] = useState(false);
   const { setUserName } = useContext(ComentsContext);
   const handleGoToLogin = () => {
-    axios.get(`https://socialmedia-123.onrender.com/Auth/${email}/${password}`)
+    axios.get(`/Auth/${email}/${password}`)
       .then((response) => {
         const data = response.data;
         const arrayOfValue = Object.values(data)[0];
@@ -20,7 +20,7 @@ export default function AuthenticationPage({ setAuthenticated }) {
           alert(arrayOfValue);
         } else {
           localStorage.setItem("isAuthenticated", "true"); // Save authentication status in local storage
-          axios.get(`https://socialmedia-123.onrender.com/users/${email}`)
+          axios.get(`/users/${email}`)
             .then((response) => {
               const data = response.data;
               console.log(data);

@@ -14,7 +14,7 @@ export default function Scrollpage({
   useEffect(() => {
     if (userName) {
      
-      fetch(`https://socialmedia-123.onrender.com/GetAllPosts/${userName}`,{mode:"no-cors"})
+      fetch(`/GetAllPosts/${userName}`)
         .then((res) => {
           console.log(res);
           return res.json();
