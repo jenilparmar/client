@@ -53,7 +53,7 @@ export default function App() {
         value={{ setCommentActive, commentActive,id,setID,setName, name ,getSigning ,setGetSigning,userName,handleClick ,setUserName}}>
         {" "} 
         {/* Provide the context value */}
-        {!true ? (
+        {!authenticated ? (
           <AuthenticationPage  setAuthenticated={setAuthenticated}/> 
           //  {!false ? (
           //   <AuthenticationPage  setAuthenticated={setAuthenticated}/>
